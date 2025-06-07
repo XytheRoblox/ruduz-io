@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruduz - Home</title>
+  <style>
+    /* Basic reset and 100% height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      /* Soft gradient background (blue / white) */
+      background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column; /* So the banner is stacked under the nav */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff; /* White background for the header area */
+    }
+    /* Logo & Nav container */
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 5%;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #0056b3;
+    }
+
+    /* NEW: Banner under the nav links */
+    .banner {
+      background-color: #007bff; /* Banner background */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .banner p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Main content wrapper to push footer down */
+    main {
+      flex: 1; /* Fills available vertical space, pushing footer to bottom */
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hero Section */
+    .hero {
+      flex: 1; /* If there's more content, this will expand */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 5% 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .cta-buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Features Section (Optional) */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 5%;
+      justify-content: center;
+    }
+    .feature-box {
+      background: #fff;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .feature-box h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .feature-box p {
+      font-size: 0.95rem;
+    }
+
+    /* Footer pinned at the bottom */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.07);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with new banner -->
+  <header>
+    <div class="header-top">
+      <div class="logo">Ruduz</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="new.html">Dashboard</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+    <!-- Banner below the nav links -->
+    <div class="banner">
+      <p>First platform built for playing with friends!</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to Ruduz</h1>
+      <p>Entry level free Minecraft server hosting platform meant for friends to play together in a heartbeat
+        without the hassle of port forwarding and spending hours skimming through horribly put together videos.
+
+      </p>
+      <div class="cta-buttons">
+        <a href="about.html">Learn More</a>
+        <a href="signup.html">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Optional Feature / Info Cards -->
+    <section class="features">
+      <div class="feature-box">
+        <h3>Easy to Use</h3>
+        <p>Only one click is required to create a new server with an intuitive panel to manage files
+            and run commands and manage files.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>High End</h3>
+        <p>Each server on the Ruduz framework has 5GB of storage and 2GB of RAM with our Free Tier.</p>
+      </div>
+      <div class="feature-box">
+        <h3>24/7 Support</h3>
+        <p>We’re here around the clock to help you troubleshoot, 
+          optimize, and succeed.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer at Bottom -->
+  <footer>
+    © 2025 Ruduz. All rights reserved.
+  </footer>
+</body>
+</html>

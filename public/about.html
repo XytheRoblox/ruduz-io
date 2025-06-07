@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Ruduz</title>
+  <style>
+    /* Basic reset and 100% height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      /* Soft gradient background (blue / white) */
+      background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column; /* so the banner is stacked under the nav */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff; /* White background for the header area */
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 5%;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0056b3;
+    }
+
+    /* Banner under the nav links */
+    .banner {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .banner p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Main content wrapper to push footer down */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* center the content horizontally */
+      padding: 40px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* About content card */
+    .content-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .content-card h1 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .content-card p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Footer pinned at the bottom */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.07);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with banner -->
+  <header>
+    <div class="header-top">
+      <div class="logo">Ruduz</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="new.html">Dashboard</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+    <div class="banner">
+      <p>Learn more about the Ruduz platform</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-card">
+      <h1>About Ruduz</h1>
+      <p>
+        Ruduz is an all-in-one platform for hosting, community-building, and modern server
+        management. We strive to provide a seamless experience for users of all skill levels—
+        from hobbyists to large-scale professional organizations.
+      </p>
+
+      <p>
+        Our team at Ruduz believes in delivering high-performance solutions without
+        sacrificing user-friendliness. Whether you’re setting up your first server or
+        managing an entire network, our tools are designed to make your journey smooth
+        and efficient.
+      </p>
+
+      <p>
+        Feel free to explore our platform’s features, and get in touch if you have any questions!
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Ruduz. All rights reserved.
+  </footer>
+</body>
+</html>

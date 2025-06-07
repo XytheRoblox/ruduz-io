@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <style>
+      /* Basic reset and 100% height */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        /* Soft gradient background (blue / white) */
+        background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
+        color: #333;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        flex-direction: column; /* so the banner is stacked under the nav */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* White background for the header area */
+      }
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 5%;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+      }
+      nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #007bff;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #0056b3;
+      }
+
+      /* Banner */
+      .banner {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      .banner p {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      /* Main container (flex:1 to push footer down) */
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* centers the form vertically in remaining space */
+        padding: 40px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* The login form "card" */
+      #container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      #container input {
+        margin: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      #container button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      #container button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 15px;
+        /* No white background or box-shadow to blend with gradient */
+      }
+    </style>
+</head>
+<body>
+
+  <!-- Header (logo/nav/banner) -->
+  <header>
+    <div class="header-top">
+      <div class="logo">Ruduz</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="new.html">Dashboard</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+    <div class="banner">
+      <p>Log in to your account</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Login form -->
+    <div id="container">
+      <h2>Log In</h2>
+      <label>Username:</label>
+      <input id="user" type="text" placeholder="Enter username">
+      <br/>
+      <label>Password:</label>
+      <input id="pass" type="password" placeholder="Enter password">
+      <br/>
+      <button id="submit">Submit</button>
+    </div>
+  </main>
+
+  <!-- Footer at bottom -->
+  <footer>
+    © 2025 Ruduz. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="login.js"></script>
+</body>
+</html>

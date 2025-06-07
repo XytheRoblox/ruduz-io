@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruduz - Plans</title>
+  <style>
+    /* Basic reset and 100% height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      /* Soft gradient background (blue / white) */
+      background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column; /* so the banner is stacked under the nav */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff; /* White background for the header area */
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 5%;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0056b3;
+    }
+
+    /* Banner under the nav links */
+    .banner {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .banner p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Main content wrapper to push footer down */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* center the content horizontally */
+      padding: 40px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Page Title */
+    .page-title {
+      color: #007bff;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    /* Plans container (cards side by side) */
+    .plans-container {
+      display: flex;
+      flex-wrap: wrap; /* so they stack on smaller screens */
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Each plan card */
+    .plan-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 0 1 300px; /* each card about 300px wide, flexible if screen narrows */
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .plan-card h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .plan-card ul {
+      text-align: left;
+      margin: 0 auto 20px auto;
+      padding: 0;
+      list-style: none;
+      max-width: 200px;
+    }
+
+    .plan-card ul li {
+      margin-bottom: 10px;
+      line-height: 1.4;
+      position: relative;
+      padding-left: 15px; /* space for bullet arrow/marker if you want */
+    }
+
+    /* Example bullet or icon, optional
+    .plan-card ul li::before {
+      content: "•";
+      color: #007bff;
+      position: absolute;
+      left: 0;
+    }
+    */
+
+    .plan-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .plan-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer pinned at the bottom */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.07);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with banner -->
+  <header>
+    <div class="header-top">
+      <div class="logo">Ruduz</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="new.html">Dashboard</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+    <div class="banner">
+      <p>Choose the plan that fits your needs</p>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Our Plans</h1>
+    <div class="plans-container">
+      <!-- FREE TIER -->
+      <div class="plan-card">
+        <h2>Free Tier</h2>
+        <ul>
+          <li>2 GB RAM</li>
+          <li>5 GB Storage</li>
+          <li>3 Servers at a Time</li>
+          <li>All Server Softwares</li>
+        </ul>
+        <!-- Link to sign up, adjust as needed -->
+        <a href="signup.html" class="plan-button">Get Free</a>
+      </div>
+
+      <!-- PREMIUM TIER -->
+      <div class="plan-card">
+        <h2>Premium Tier</h2>
+        <ul>
+          <!-- Example Premium benefits; edit as desired -->
+          <li>8 GB RAM</li>
+          <li>20 GB Storage</li>
+          <li>Unlimited Servers</li>
+          <li>All Server Softwares</li>
+          <li>24/7 Priority Support</li>
+        </ul>
+        <!-- Link to sign up, adjust as needed -->
+        <a href="signup.html" class="plan-button">Go Premium</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Ruduz. All rights reserved.
+  </footer>
+</body>
+</html>

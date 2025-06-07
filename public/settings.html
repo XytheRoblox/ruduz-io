@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <style>
+    /* Basic reset and 100% height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, white, #f0f8ff);
+    }
+
+    .settings-container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="settings-container">
+    <h1>Settings</h1>
+    <p>Click below to log out of your account.</p>
+    <button id="logout-btn">Log Out</button>
+  </div>
+
+  <script>
+    const logoutBtn = document.getElementById('logout-btn');
+
+    logoutBtn.addEventListener('click', async () => {
+      try {
+        // Call your backend to invalidate/destroy session token
+        const response = await fetch('/api/auth/logout', { method: 'POST' });
+        if (response.ok) {
+          // Redirect to login.html or wherever you want after logout
+          window.location.href = 'login.html';
+        } else {
+          alert('Logout failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error logging out:', error);
+        alert('An error occurred during logout.');
+      }
+    });
+  </script>
+
+</body>
+</html>

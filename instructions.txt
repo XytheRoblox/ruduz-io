@@ -1,0 +1,11 @@
+. sudo docker run -dit --entrypoint /bin/bash -p 0:25565 itzg/minecraft-server
+
+2. sudo docker exec CID wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
+
+3. sudo docker exec -it CID bash -c 'echo "eula=true" > /data/eula.txt'
+
+4. sudo docker exec CID java -Xmx1024M -Xms1024M -jar server.jar nogui START
+
+
+
+GET LOGS: sudo docker exec -it 3f210556b31c /bin/sh -c "cat /data/logs/latest.log"
